@@ -5,9 +5,179 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Billionaire's diary</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://kit.fontawesome.com/aaf233f2c6.js" crossorigin="anonymous"></script>
 </head>
 <body>
     
+
+    
+<button data-drawer-target="default-sidebar" data-drawer-toggle="default-sidebar" aria-controls="default-sidebar" type="button" class="inline-flex items-center p-2 mt-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600">
+    <span class="sr-only">Open sidebar</span>
+    <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+       <path clip-rule="evenodd" fill-rule="evenodd" d="M2 4.75A.75.75 0 012.75 4h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 4.75zm0 10.5a.75.75 0 01.75-.75h7.5a.75.75 0 010 1.5h-7.5a.75.75 0 01-.75-.75zM2 10a.75.75 0 01.75-.75h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 10z"></path>
+    </svg>
+ </button>
+ 
+ <aside id="default-sidebar" class="fixed top-0 left-0 z-40 w-80 h-screen transition-transform -translate-x-full sm:translate-x-0" aria-label="Sidebar">
+    <div style="background-color: rgb(12, 3, 62);" class="h-full py-4 overflow-y-auto dark:bg-gray-800 flex justify-center">
+       <ul class="space-y-2">
+        <h3 class="text-center text-white text-3xl font-semibold my-5">BILLIONAIRE<br>DIARY</h3>
+
+          <li>
+             <a href="#" class="flex items-center justify-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
+                <span class=" bg-slate-100 w-full py-2 text-center">Add a User<br>(Randomly)</span>
+             </a>
+          </li>
+
+          <li>
+             <a href="#" class="flex items-center justify-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
+                <span class=" bg-slate-100 w-full py-2 text-center">Double Money</span>
+             </a>
+          </li>
+
+          <li>
+             <a href="#" class="flex items-center justify-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
+                <span class=" bg-slate-100 w-full py-2 text-center">Sort By Bank<br>(Descending)</span>
+             </a>
+          </li>
+          
+          <li>
+            <a href="#" class="flex items-center justify-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
+               <span class="bg-slate-100 w-full px-5 py-2 text-center">Calculate Entire Wealth</span>
+            </a>
+         </li>
+
+          <li>
+            <hr class="w-4/5 mx-auto my-6">
+          </li>
+
+          <li>
+             <a href="#" class="flex items-center justify-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
+                <span class=" bg-slate-100 w-full py-2 text-center">Show all billionaires</span>
+             </a>
+          </li>
+
+          <li>
+             <a href="#" class="flex items-center justify-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
+                <span class=" bg-slate-100 w-full py-2 text-center">Richest By Industry<br>(Technology)</span>
+             </a>
+          </li>
+
+          <li>
+             <a href="#" class="flex items-center justify-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
+                <span class=" bg-slate-100 w-full py-2 text-center">Richest By States<br>(Texas)</span>
+             </a>
+          </li>
+       </ul>
+    </div>
+ </aside>
+ 
+ <main class="sm:ml-80">
+    <section class="p-5">
+        <input class="border-b-2 border-slate-400 p-2 w-1/5" type="text" placeholder="Search">
+    </section>
+
+    <section class="bg-slate-300">
+        <div class="p-8">
+            <h3 class="text-3xl font-semibold mt-3 mb-5">Hello, User!</h3>
+
+            <table class="w-full mx-auto text-xl">
+                <thead class="border-b-2 border-slate-400 text-left  h-16">
+                  <tr>
+                    <th>Person</th>
+                    <th>Citizenship</th>
+                    <th>Industry</th>
+                    <th>Rank</th>
+                    <th>Wealth</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr class="h-16">
+                    <td>Jeff Bezos <i class="fa-regular fa-eye"></i></td>
+                    <td>United States</td>
+                    <td>Technology</td>
+                    <td>3</td>
+                    <td>$124317.31</td>
+                  </tr>
+                  <tr class="h-16">
+                    <td>Sergey-brin <i class="fa-regular fa-eye"></i></td>
+                    <td>United States</td>
+                    <td>Technology</td>
+                    <td>12</td>
+                    <td>$124317.31</td>
+                  </tr>
+                  <tr class="h-16 border-b-2 border-slate-400">
+                    <td>Murat vargi <i class="fa-regular fa-eye"></i></td>
+                    <td>Turkey</td>
+                    <td>Telecom</td>
+                    <td>2495</td>
+                    <td>$1029.57</td>
+                  </tr>
+                  <tr class="h-28">
+                    <td>Total</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>$205873.27</td>
+                  </tr>
+                  
+                </tbody>
+              </table>
+
+
+
+
+
+            <!-- <ul class="flex justify-between">
+                <li>Person</li>
+                <li>Citizenship</li>
+                <li>Industry</li>
+                <li>Rank</li>
+                <li>Wealth</li>
+            </ul>
+
+            <hr>
+
+            <ul class="flex justify-between">
+                <li>Jeff Bezos </li>
+                <li>United States</li>
+                <li>Technology</li>
+                <li>3</li>
+                <li>$124317.31</li>
+            </ul>
+            
+            
+            <ul class="flex justify-between">
+                <li>Sergey-brin </i></li>
+                <li>United States</li>
+                <li>Technology</li>
+                <li>12</li>
+                <li>$80526.39</li>
+            </ul>
+            
+            
+            <ul class="flex justify-between">
+                <li>Murat Vargi </i></li>
+                <li>Turkry</li>
+                <li>Telecom</li>
+                <li>2495</li>
+                <li>$1029.57</li>
+            </ul>
+
+            <hr>
+
+            <ul class="flex justify-between">
+                <li>Total</li>
+                <li>$205873.27</li>
+            </ul> -->
+            
+            
+        </div>
+    </section>
+    
+ </main>
+ 
 
     <script src="js/showBillionaires.js"></script>
 </body>
