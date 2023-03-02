@@ -1,36 +1,27 @@
-//Fetch operation using async await keywords
-
-const loadPersons= async()=> {
+const loadPersonsByIndustry= async(industry)=> {
     try{
-        const url= `https://raw.githubusercontent.com/Chayti/Billionaire-Diary-resources/main/AllBillionaires.json`;
+        const url= `https://forbes400.onrender.com/api/forbes400/industries/${industry}`;
 
         const res= await fetch(url);
         const data= await res.json();
-        displayPersonDetails(data);
+        displayPersonDetailsByIndustry(data);
     }
     catch(error){
         console.log(error);
     }
 }
 
-const displayPersonDetails= (persons)=>{
-    
+const displayPersonDetailsByIndustry= (persons) =>{
     const billionairesContainer= document.getElementById('billionaires-container');
     billionairesContainer.classList.remove('hidden');
 
     const billionairesBoxes= document.getElementById('billionaires-boxes');
 
-    if(persons.length>12){
-        persons= persons.slice(0, 12);
-    }
-    else{
-        const buttonShowMore= document.getElementById('btn-show-more');
-        buttonShowMore.classList.add= 'hidden';
-    }
+    const homeContainer= document.getElementById('home-page-container');
+    homeContainer.textContent='';
 
-    
     persons.forEach(person => {
-        // console.log(person.source? person.source: 'unavailable');
+        console.log(person.personName? person.personName: 'unavailable');
 
         const boxDiv= document.createElement('div');
         boxDiv.classList.add('col');
@@ -53,27 +44,14 @@ const displayPersonDetails= (persons)=>{
     });
 }
 
-const eventProcessor= () =>{
-    const homeContainer= document.getElementById('home-page-container');
-    homeContainer.textContent='';
-    loadPersons();
-}
-
-document.getElementById('all-billionaires').addEventListener('click', function(){
-    eventProcessor();
-})
 
 
-document.getElementById('btn-show-more').addEventListener('click', function(){
-    eventProcessor();
-})
 
-const toggleSpinner = isLoading => {
-    const spinnerSection = document.getElementById('spinner');
-    if (isLoading) {
-        spinnerSection.classList.remove('d-none');
+document.getElementById('search-box').addEventListener('keypress', function(e) {
+    if (e.key == 'Enter') {
+    const searchBox = document.getElementById('search-box');
+    const searchText = searchBox.value;
+    searchBox.innerText = '';
+    loadPersonsByIndustry(searchText);
     }
-    else {
-        spinnerSection.classList.add('d-none');
-    }
-}
+})
