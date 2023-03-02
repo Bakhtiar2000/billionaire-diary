@@ -54,7 +54,7 @@
 
           <li>
              <a href="#" class="flex items-center justify-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
-                <span class=" bg-slate-100 w-full py-2 text-center">Show all billionaires</span>
+                <span id="all-billionaires" class=" bg-slate-100 w-full py-2 text-center">Show all billionaires</span>
              </a>
           </li>
 
@@ -75,10 +75,10 @@
  
  <main class="sm:ml-80">
     <section class="p-5">
-        <input class="border-b-2 border-slate-400 p-2 w-1/5" type="text" placeholder="Search">
+        <input id="search-box" class="border-b-2 border-slate-400 p-2 xl:w-1/5" type="text" placeholder="Search by Name">
     </section>
 
-    <section class="bg-slate-300">
+    <section id="home-page-container" class="bg-slate-300 max-h-screen">
         <div class="p-8">
             <h3 class="text-3xl font-semibold mt-3 mb-5">Hello, User!</h3>
 
@@ -123,56 +123,21 @@
                   </tr>
                   
                 </tbody>
-              </table>
+              </table>           
+        </div>
+    </section>
 
+    <section id="billionaires-container" class="h-screen hidden">
+        <h3 class="text-center my-5 mb-2 text-3xl font-semibold
+        ">All billionaires by rank</h3>
 
-
-
-
-            <!-- <ul class="flex justify-between">
-                <li>Person</li>
-                <li>Citizenship</li>
-                <li>Industry</li>
-                <li>Rank</li>
-                <li>Wealth</li>
-            </ul>
-
-            <hr>
-
-            <ul class="flex justify-between">
-                <li>Jeff Bezos </li>
-                <li>United States</li>
-                <li>Technology</li>
-                <li>3</li>
-                <li>$124317.31</li>
-            </ul>
-            
-            
-            <ul class="flex justify-between">
-                <li>Sergey-brin </i></li>
-                <li>United States</li>
-                <li>Technology</li>
-                <li>12</li>
-                <li>$80526.39</li>
-            </ul>
-            
-            
-            <ul class="flex justify-between">
-                <li>Murat Vargi </i></li>
-                <li>Turkry</li>
-                <li>Telecom</li>
-                <li>2495</li>
-                <li>$1029.57</li>
-            </ul>
-
-            <hr>
-
-            <ul class="flex justify-between">
-                <li>Total</li>
-                <li>$205873.27</li>
-            </ul> -->
-            
-            
+        <div id="billionaires-boxes" class=" bg-slate-200 grid md:grid-cols-2 2xl:grid-cols-3 gap-5 p-4">
+    
+        </div>
+        <div id="show-more" class="text-center">
+            <button id="btn-show-more" class="bg-slate-300 text-center text-xl text-semibold my-5 px-3 py-1 rounded border border-slate-600 shadow-slate-800 shadow-">
+                Show more
+            </button>
         </div>
     </section>
     
